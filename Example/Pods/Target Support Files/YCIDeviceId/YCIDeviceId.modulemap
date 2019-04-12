@@ -1,0 +1,6 @@
+framework module YCIDeviceId {
+  umbrella header "YCIDeviceId-umbrella.h"
+
+  export *
+  module * { export * }
+}

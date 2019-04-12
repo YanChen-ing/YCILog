@@ -1,0 +1,17 @@
+{
+    "ViewController/UIView/UIButton[0]&btn1Clicked:":{
+        "const": {
+            "testABC":"oo^~^oo"
+        },"kvc": {
+            "currentTitle":"currentTitle"
+        }
+    },
+    "RIzmF339":{
+        "const": {
+            "测试事件监听":"oo^~^oo"
+        },"kvc": {
+            "currentTitle":"currentTitle"
+        }
+    }
+    
+}

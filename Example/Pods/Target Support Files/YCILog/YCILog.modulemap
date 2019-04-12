@@ -1,0 +1,6 @@
+framework module YCILog {
+  umbrella header "YCILog-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'YCILog_Example' do
+  pod 'YCILog', :path => '../'
+
+  target 'YCILog_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

@@ -1,0 +1,34 @@
+PODS:
+  - YCIDeviceId (0.1.0)
+  - YCILog (0.1.0):
+    - YCILog/AutoTrack (= 0.1.0)
+    - YCILog/Core (= 0.1.0)
+    - YCILog/CrashReporter (= 0.1.0)
+    - YCILog/Destinations (= 0.1.0)
+  - YCILog/AutoTrack (0.1.0):
+    - YCILog/Core
+  - YCILog/Core (0.1.0):
+    - YCIDeviceId
+  - YCILog/CrashReporter (0.1.0):
+    - YCILog/Core
+  - YCILog/Destinations (0.1.0):
+    - YCILog/Core
+
+DEPENDENCIES:
+  - YCILog (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - YCIDeviceId
+
+EXTERNAL SOURCES:
+  YCILog:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  YCIDeviceId: 8b7c35e7065d907889b9560ac86bf2e8de862a10
+  YCILog: cd667525a58b992d7a66ba49043542887f240db3
+
+PODFILE CHECKSUM: c8a8f71bcc63e9158a40c618bd5832eae48e20e4
+
+COCOAPODS: 1.6.1

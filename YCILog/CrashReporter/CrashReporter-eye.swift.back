@@ -1,0 +1,79 @@
+//
+//  CrashReporter-eye.swift
+//  Pods
+//
+//  Created by yanchen on 2018/7/19.
+//
+
+import Foundation
+
+extension CrashReporter: CrashEyeDelegate {
+    
+    public func crashEyeDidCatchCrash(with model:CrashModel) {
+        
+        var baseURL: URL?
+        
+        if let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+            baseURL = url
+        }
+        
+        if let baseURL = baseURL {
+            print("日志文件基址：" + baseURL.absoluteString)
+            // 设置各文件地址
+            
+            let crashFileURL = baseURL.appendingPathComponent("BIZMobile_crash.crash",
+                                                              isDirectory: false)
+            
+            _ = saveToFile(formattedCrashReport(with: model), url: crashFileURL)
+        }
+        
+    }
+    
+    func formattedCrashReport(with model:CrashModel) -> String {
+        
+        let time = Date().description
+        
+        let info = model.appinfo!
+        //
+        let humanReadText = model.callStack!
+        
+        let content =
+            "Crashed on \(time)\n"
+                + "Crashed with signal \(model.reason!)\n"
+                + "\(info)\n"
+                + "\(humanReadText)"
+        
+        return content
+    }
+    
+    
+    // MARK: 文件操作
+    
+    /// 将字符串作为一行，追加到文件中
+    ///
+    /// - Returns: 保存成功？
+    func saveToFile(_ str: String, url: URL, overwrite: Bool = false) -> Bool {
+        do {
+            if FileManager.default.fileExists(atPath: url.path) == false || overwrite {
+                // create file if not existing
+                let line = str + "\n"
+                try line.write(to: url, atomically: true, encoding: String.Encoding.utf8)
+            } else {
+                // append to end of file
+                let fileHandle = try FileHandle(forWritingTo: url)
+                _ = fileHandle.seekToEndOfFile()
+                let line = str + "\n"
+                if let data = line.data(using: String.Encoding.utf8) {
+                    fileHandle.write(data)
+                    fileHandle.closeFile()
+                }
+            }
+            return true
+        } catch {
+            //            toNSLog("Error! Could not write to file \(url).")
+            return false
+        }
+    }
+}
+
+
