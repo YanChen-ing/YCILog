@@ -1,10 +1,8 @@
 # YCILog
 
 <!--[![CI Status](https://img.shields.io/travis/YanChen-ing/YCILog.svg?style=flat)](https://travis-ci.org/YanChen-ing/YCILog)-->
-[![Version](https://img.shields.io/cocoapods/v/YCILog.svg?style=flat)]
-(https://cocoapods.org/pods/YCILog)
-[![License](https://img.shields.io/cocoapods/l/YCILog.svg?style=flat)]
-(https://github.com/YanChen-ing/YCILog/blob/master/README.md)
+[![Version](https://img.shields.io/cocoapods/v/YCILog.svg?style=flat)](https://cocoapods.org/pods/YCILog)
+[![License](https://img.shields.io/cocoapods/l/YCILog.svg?style=flat)](https://github.com/YanChen-ing/YCILog/blob/master/README.md)
 [![Platform](https://img.shields.io/cocoapods/p/YCILog.svg?style=flat)](https://github.com/YanChen-ing/YCILog/)
 
 日志收集
