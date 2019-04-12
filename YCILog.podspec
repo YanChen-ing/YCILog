@@ -22,8 +22,6 @@ Pod::Spec.new do |s|
   s.swift_version = '4.1'
   
   s.subspec 'Core' do |ss|
-    
-#    ss.dependency 'YCINetworking/Core'
 
     ss.dependency 'YCIDeviceId'
     
