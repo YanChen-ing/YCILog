@@ -19,7 +19,7 @@
 
 # 演示
 
-![](img/displaying.gif)
+![](img/displaying)
 
 <!--<img src="img/displaying.gif" width = 50% height = 50% div align=center />-->
 # 设计
