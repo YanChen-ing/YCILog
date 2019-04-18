@@ -1,0 +1,12 @@
+language: swift
+osx_image: xcode10.1
+
+cache: bundler
+
+matrix:
+  include:
+  - name: iOS | Swift 4.2
+    env: LANE=test_ci SCHEME=YCILog SWIFT_VERSION=4.2
+
+script:
+  - bundle exec fastlane $LANE
